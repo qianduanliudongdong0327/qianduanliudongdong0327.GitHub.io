@@ -1,0 +1,62 @@
+/*������ʽ*/
+
+/*1.��ʽ����*/
+html,body,ul,li,img,a,p,form,input{
+    padding: 0;
+    margin: 0;
+    /*���ú�ģ��*/
+    box-sizing: border-box;
+    /*ȥ���ƶ������еĵ������Ч��*/
+    -webkit-tap-highlight-color: transparent;
+}
+body{
+    font-family: "΢���ź�",sans-serif;
+    font-size: 13px;
+}
+a,
+a:hover{
+    color: #666;
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+input{
+    outline: none;
+    border: none;
+    border: 1px solid #ccc;
+}
+input{
+    /*1.����ı����ȡ����ʱĬ�ϵı߿���Ӱ*/
+    outline: none;
+    /*2.ȥ���߿�*/
+    border: none;
+    /*3.��ӱ߿�*/
+    border: 1px solid #ccc;
+}
+
+/*2.����µ���ʽ*/
+.f_left{
+    float: left;
+}
+.f_right{
+    float: right;
+}
+.m_left10{
+    margin-left: 10px;
+}
+.m_right10{
+    margin-right: 10px;
+}
+.m_top10{
+    margin-top: 10px;
+}
+.clearfix::before,
+.clearfix::after{
+    content: "";
+    display: block;
+    height: 0;
+    line-height: 0px;
+    clear: both;
+    visibility: hidden;
+}

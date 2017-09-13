@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>棠宝1</title>
+    <link rel="stylesheet" href="./static/css/base.css">
+    <link rel="stylesheet" href="./static/css/tb1.css">
+</head>
+<body>
+    <div class="box">
+        <!-- 标题栏开始 -->
+        <div class="titl">
+            <img class="logo" src="./static/images/logo.png" alt="">
+            <span class="biaotiwenzi"></span>
+            <p>点击下载APP</p>
+            <img class="shouji" src="./static/images/shouji tubiao.png" alt=""> 
+            <span class="login">登陆</span> 
+        </div>
+        <!-- 标题栏结束 -->
+        <div id="left">
+                <!-- 公告栏开始 -->
+                <div class="notice">
+                    <p>公告:陕西省国家税务局 陕西省地方税务局关于税务事物所实施行政登记的通知</p>
+                    <img src="./static/images/jiantou.png" alt="">
+                </div>
+                <!-- 公告栏结束 -->
+                <div class="content">
+                    <span class="datingdaohang"> 
+                        <p>大厅导航</p>
+                        <!-- <img class="datingdaohang" src="./images/dating.png" alt=""> -->
+                    </span>       
+                    <span class="gonggao">
+                        <p>公告公示</p>
+                    </span>    
+                    <span class="shuishoufagui">
+                            <p>税收法规</p>
+                    </span>
+                    <span class="banshuiditu">
+                            <p>办税地图</p>
+                    </span>
+                    <span class="datingliuliang">
+                            <p>大厅流量</p>
+                    </span>
+                    <span class="zhengqirili">
+                            <p>征期日历</p>
+                    </span>
+                    <span class="zhuanguanyuan">
+                            <p>税收专管员</p>
+                    </span>
+                    <span class="fapiaodaikai">
+                            <p>发票代开</p>
+                    </span>
+                    <span class="paiduiqvhao">
+                            <p> 排队取号</p>
+                    </span>
+                    <span class="banshuizhinan">
+                            <p>办税指南</p>
+                    </span>
+                    <div class="pagination">
+                        <ul>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </div>
+                </div>
+
+        </div>
+        
+        <div id="right">
+            <div id="setting">
+                <img class="xuxian" src="./static/images/xuxian.png">
+                <p class="zhineng">智能客服</p> 
+                <ul class="ull">
+                    <li class="duihuatiao clearfix">
+                        <img class="yonghutouxiang" src="./static/images/yonghutouxiang.png" alt="">
+                        <div class="dialog1">
+                            你好我第一次申办需要什么材料 
+                        </div>
+                    </li>
+                </ul>
+
+                <ul class="ull1">
+                    <li class="duihuatiao1 clearfix">
+                        <img class="kefutuxiang" src="./static/images/kefutuxiang.png" alt="">
+                        <div class="dialog2">
+                            你好按实际情况填好报表后盖上公章带上税务登记证副本原件.服务卡IC到主管税务机关前台办理即可 
+                        </div>
+                    </li>
+                </ul>
+
+                <ul class="ull2">
+                    <li class="duihuatiao2 clearfix">
+                        <img class="yonghutouxiang" src="./static/images/yonghutouxiang.png" alt="">
+                        <div class="dialog3">
+                            非常感谢  
+                        </div>
+                        <!-- <span class="triangle2"></span> -->
+                    </li>
+                </ul>
+
+                <ul class="ull2">
+                    <li class="duihuatiao2 clearfix">
+                        <img class="yonghutouxiang" src="./static/images/yonghutouxiang.png" alt="">
+                        <div class="dialog3">
+                            购买金税盘价格是多少
+                        </div>
+                        <span class="triangle2"></span>
+                    </li>
+                </ul>
+
+                <ul class="ull4">
+                    <li class="duihuatiao4 clearfix">
+                        <img class="kefutuxiang" src="./static/images/kefutuxiang.png" alt="">
+                        <div class="dialog5">
+                            从8月1日起实施，金税盘价格从480元降到了200元，维护费从每年的330元降到了每年280元了！首次办理合计480元,以后每年280元服务费。
+                        </div>
+        
+                    </li>
+                </ul>
+                <div class="voice">
+                    <span>按住 说话</span>
+                </div>
+                <input type="search" x-webkit-speech />
+                
+                <div class="footer">
+                    <p class="hint">你可以说“小宝”,来呼唤我</p>
+                </div>
+            </div>    
+            
+        <div>
+                
+
+    
+    </div>
+    <script>
+        var setting = document.getElementById('setting');
+        var voice = document.querySelector('.voice');
+        console.log(voice)
+        var startTime = null;
+        voice.addEventListener('touchstart',function(e){
+            setTimeout(function(){
+                recognition.start();
+            },1000)
+            var recognition = new webkitSpeechRecognition(); 
+                recognition.onresult = function(event) { 
+                console.log(event) 
+                }
+            console.log(recognition)
+        })
+        
+        voice.addEventListener('touchend',function(e){
+            console.log(e)
+            var endTime = Date.now();
+            if(endTime-startTime >=1000){
+                console.log(1)
+            } 
+        })
+
+    </script>
+</body>
+</html>
